@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Casamigos - Web Flyer</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <div class="wrap">
+    <nav>
+      <div class="brand">LCBO Store 661 - Bramalea &amp; Mayfield</div>
+      <div class="navlinks">
+        <a href="index.html">Home</a>
+        <a href="store.html">Store Page</a>
+        <a href="producer.html">Producer Flyer</a>
+        <a href="posts.html">3 Product Posts</a>
+        <a href="wordpress.html">WordPress DB</a>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <span class="badge">Web flyer - Producer spotlight</span>
+      <h1>Casamigos Tequila - Featured Producer</h1>
+      <p>
+        Casamigos produces ultra-premium tequila made from 100% Blue Weber agave.
+        Available at LCBO Store 661 (Bramalea &amp; Mayfield).
+      </p>
+      <p class="small">
+        Product codes used from the LCBO catalogue: 425686 (Anejo), 388694 (Reposado), 386789 (Blanco).
+      </p>
+    </section>
+
+    <div class="grid cards" style="margin-top:16px">
+      <section class="card">
+        <h2>Featured bottle</h2>
+        <p><strong>Casamigos Tequila Anejo</strong> (LCBO# <strong>425686</strong>)</p>
+        <div style="display:flex;gap:16px;flex-wrap:wrap;align-items:flex-start">
+          <img src="assets/casamigos-anejo.png" alt="Casamigos Tequila Anejo bottle" width="150" height="280" />
+          <div style="flex:1;min-width:260px">
+            <table class="table">
+              <tr><th>Size</th><td>750 mL</td></tr>
+              <tr><th>ABV</th><td>40% (80 proof)</td></tr>
+              <tr><th>Country</th><td>Mexico</td></tr>
+              <tr><th>Price</th><td>$[db.price]</td></tr>
+              <tr><th>Stock at store 661</th><td>[db.stock_qty]</td></tr>
+              <tr><th>Style / notes</th><td>Balanced sweetness with subtle spice and barrel oak; smooth finish.</td></tr>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>More Casamigos in-store</h2>
+        <table class="table">
+          <tr>
+            <th>Product</th>
+            <th>LCBO#</th>
+            <th>Size</th>
+            <th>ABV</th>
+            <th>Price</th>
+            <th>Stock (store 661)</th>
+          </tr>
+          <tr>
+            <td>
+              <div style="display:flex;gap:10px;align-items:center">
+                <img src="assets/casamigos-reposado.png" alt="Casamigos Tequila Reposado bottle" width="42" height="78" style="border-radius:6px" />
+                <span>Casamigos Tequila Reposado</span>
+              </div>
+            </td>
+            <td>388694</td>
+            <td>750 mL</td>
+            <td>40%</td>
+            <td>$[db.price_388694]</td>
+            <td>[db.stock_388694]</td>
+          </tr>
+          <tr>
+            <td>
+              <div style="display:flex;gap:10px;align-items:center">
+                <img src="assets/casamigos-blanco.png" alt="Casamigos Tequila Blanco bottle" width="42" height="78" style="border-radius:6px" />
+                <span>Casamigos Tequila Blanco</span>
+              </div>
+            </td>
+            <td>386789</td>
+            <td>750 mL</td>
+            <td>40%</td>
+            <td>$[db.price_386789]</td>
+            <td>[db.stock_386789]</td>
+          </tr>
+        </table>
+        <p class="small">
+          Notes (Reposado): caramel, oak, hints of cocoa; spicy oak + dried fruit.
+          Notes (Blanco): citrus, vanilla and sweet agave; fruit-forward with vanilla and grapefruit.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>Quick serve ideas</h2>
+        <p><strong>Simple Paloma</strong>: Blanco + grapefruit soda + lime.</p>
+        <p><strong>Old Fashioned twist</strong>: Anejo + agave syrup + bitters + orange peel.</p>
+        <p><strong>On the rocks</strong>: Reposado over a large cube; add a pinch of salt.</p>
+      </section>
+    </div>
+
+    <p class="footer">Please enjoy responsibly.</p>
+  </div>
+</body>
+</html>
+

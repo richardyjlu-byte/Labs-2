@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WordPress Database Tables</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <div class="wrap">
+    <nav>
+      <div class="brand">WordPress Database Overview</div>
+      <div class="navlinks">
+        <a href="index.html">Home</a>
+        <a href="store.html">Store Page</a>
+        <a href="producer.html">Producer Flyer</a>
+        <a href="posts.html">3 Product Posts</a>
+        <a href="wordpress.html">WordPress DB</a>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <span class="badge">WordPress database</span>
+      <h1>WordPress database: main tables</h1>
+      <p>
+        WordPress stores most content and configuration in a set of core tables created during a standard install.
+        Below are the common core tables (single-site) and what each one is for.
+      </p>
+    </section>
+
+    <div class="grid cards" style="margin-top:16px">
+      <section class="card">
+        <h2>wp_posts</h2>
+        <p>
+          Central content table. Stores posts, pages, attachments, navigation menu items, and custom post types.
+          Key fields include an ID, author, timestamps, status, title, content, and post type.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>wp_postmeta</h2>
+        <p>
+          Stores key/value "meta" for posts in <code>wp_posts</code>. This is how WordPress and plugins attach extra attributes
+          (for example: featured image ID, custom fields, SEO metadata, e-commerce product details) without altering the core schema.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>wp_users</h2>
+        <p>
+          User accounts table. Contains core identity fields like username (login), password hash, email, display name,
+          registration time, and activation key.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>wp_usermeta</h2>
+        <p>
+          Stores key/value metadata for users, similar to postmeta. This includes user preferences, capabilities/roles,
+          and plugin-specific data.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>wp_options</h2>
+        <p>
+          Site-wide configuration and settings. Stores WordPress core settings (site URL, blog name), theme options, and many plugin settings.
+          Values may be "serialized" when storing structured data.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>wp_comments</h2>
+        <p>
+          Stores comments left on posts (and other content types), including the comment text, author info, timestamps, approval status,
+          and which post the comment belongs to.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>wp_commentmeta</h2>
+        <p>
+          Stores key/value metadata for comments. Used by plugins or newer core features that need extra comment attributes
+          without adding columns to <code>wp_comments</code>.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>wp_terms</h2>
+        <p>
+          Stores the term names themselves (e.g., "Tequila", "Bourbon", "Ontario"). Terms are shared across different taxonomies.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>wp_term_taxonomy</h2>
+        <p>
+          Defines what each term *means* in a specific taxonomy (category, tag, or custom taxonomy). This table links a term to a taxonomy,
+          includes a description, parent/child relationship, and a count.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>wp_term_relationships</h2>
+        <p>
+          The join table that connects posts (and other objects) to terms in a taxonomy. This is how WordPress knows which categories/tags
+          a given post belongs to.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>wp_termmeta</h2>
+        <p>
+          Stores key/value metadata for terms. Added to support attaching extra information to categories/tags/custom terms (often used by plugins).
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>wp_links</h2>
+        <p>
+          Legacy table from older WordPress versions for the Links/Blogroll feature. Some installations still have it for backward compatibility,
+          but many modern sites do not actively use it.
+        </p>
+      </section>
+    </div>
+
+    <p class="footer">&nbsp;</p>
+  </div>
+</body>
+</html>
